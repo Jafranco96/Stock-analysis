@@ -11,11 +11,11 @@ A recent finance graduate, Steve, has been tasked by his first clients to analyz
 
 ### Stock Analysis
 
-As mentioned, VBA is a more suitable platform to perform the analysis rather than manually computing the results. Accordingly, a new module was created in VBA to develop the automation code in. To begin, the code algorithm needs to determine which year of stock data to analyze, 2017 or 2018. To achieve this, an InputBox function was connected to the variable yearValue. This allows yearValue to be tied to the year that was inputted by the user. Then, using an Activate function, the analysis is tethered to the worksheet data with the according yearValue. Now that the code knows 'where' to perform the data, the next stage of the algorithm is the actual computation of the results themselves.
+As mentioned, VBA is a more suitable platform to perform the analysis rather than manually computing the results. Accordingly, a new module was created in VBA to develop the automation code in. To begin, the code algorithm needs to determine which year of stock data to analyze, 2017 or 2018. To achieve this, an InputBox function was connected to the variable yearValue. This allows yearValue to be tied to the year that was inputted by the user. Then, using an Activate function, the analysis is tethered to the worksheet data with the according yearValue. Now that the code knows *where* to perform the data, the next stage of the algorithm is the actual computation of the results themselves.
 
 Since there are several alternative energy companies and their individual results to consider, arrays are created in order to store and, later, access these values. Since Steve’s current portfolio consists of twelve companies, an array twelve characters long named tickers is created. The array’s index is then initialized to each stock code in alphabetical order. Since VBA arrays commence at index 0 rather than index 1, the last index in the array is actually index 11. The code as described is written in the module as follows:
 
-'Initialize array of all tickers
+
 
     Dim tickers(11) As String
     
@@ -34,25 +34,20 @@ Since there are several alternative energy companies and their individual result
 
 For each stock code, the stock volume, the stock starting price, the stock ending price, and the stock return are needed for the analysis. Accordingly, four output arrays are created named tickerVolumes, tickerStartingPrices, tickerEndingPrices, and tickerReturn. These arrays are not initialized since they will be populated by the code iterating through itself. To create these arrays, the code should follow as such:
 
-'---------------------Create four output arrays---------------------------------------------------------------------------
     
     Dim tickerVolumes(11) As Long
     Dim tickerStartingPrices(11) As Single
     Dim tickerEndingPrices(11) As Single
     Dim tickerReturn(11) As Single
     
-'--------------------------------------------------------------------------------------------------------------------------
 
 To achieve the code iteration, two For Loops, one nested within the other, are needed. The outer For Loop iterates through the stock codes using the ticker array. The inner For Loop iterates through every row in the worksheet using a RowCount variable that used the Count function as such:
 
-'Get the number of rows to loop over
 
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row
 
-Within these nested For Loops, three conditional formulas are calculated. First, the algorithm checks if the stock code in the current row is the same as the stock code that the ticker iterator is presently assigned to. If this condition is true, that stock code’s volume is added to that stock’s cell in the tickerVolumes array. This procedure is performed for all rows of stock data. The second formula checks the conditional of the first formula, if the stock code in the current row is the same as the ticker iterator, but also checks if the cell before the current row does not have the same stock code as the ticker iterator. If both conditionals are true, the ending stock price for the current row is assigned to that stock’s cell in the tickerStartingPrices array. The last formula checks both conditionals of the last formula, except it looks to the cell immediately after the current row, not before. If both conditionals are true, the ending stock price is assigned to that stock’s cell in tickerEndingPrices. When the nested For Loops are complete, all three arrays will be populated. The complete iteration code is below:
+Within these nested For Loops, three conditional formulas are calculated. First, the algorithm checks if the stock code in the current row is the same as the stock code that the ticker iterator is presently assigned to. If this condition is true, that stock code’s volume is added to that stock’s cell in the tickerVolumes array. This procedure is performed for all rows of stock data. The second formula checks the conditional of the first formula, if the stock code in the current row is the same as the ticker iterator, but also checks if the cell before the current row does not have the same stock code as the ticker iterator. If both conditionals are true, the ending stock price for the current row is assigned to that stock’s cell in the tickerStartingPrices array. The last formula checks both conditionals of the last formula, except it looks to the cell immediately *after* the current row, not before. If both conditionals are true, the ending stock price is assigned to that stock’s cell in tickerEndingPrices. When the nested For Loops are complete, all three arrays will be populated. The complete iteration code is below:
 
-
-'Loop over all the rows in the spreadsheet.
 
      For tickerIndex = 0 To 11
         ticker = tickers(tickerIndex)
