@@ -137,4 +137,11 @@ In comparison, the original non-refactored code yielded a run time of .72 second
 ## Summary
 •	What are the advantages or disadvantages of refactoring code?
 
+As described previously, a shorter run time is one of the advantages of refactoring a previously existing code. Another benefit is that if the original code was coded to only run through a certain amount of data, refactoring can it make so it is not bound to the data amount but is adaptable to a changing data size. Another benefit is that new programming methods can be used to replace outdated or less efficient approaches.
+
+While these are but a few of the advantages of refactoring code, one should be mindful of the disadvantages that can come with refactoring as well. For example, if one refactors code that someone else was the primary author of, a complete understanding of all the functions and nuances of the code might not be possible. This introduces the possibilities of future errors and bugs that might be difficult to identify. One should weight all possible pros and cons in each circumstance before ultimately moving forward with refactoring code. 
+
 •	How do these pros and cons apply to refactoring the original VBA script?
+
+In this particular case, besides the shorter run time, an advantage of the refactoring is that all the arrays that were created can be accessed for future use. In the original code, no arrays were created but rather values were printed directly onto the corresponding cells through the For Loop iteration. There was no storage of these values within the coded memory. What if these values were needed for another analysis? The For Loop would have to be iterated all over again. The arrays let these values be instantly accessed at any moment. A trade-off of using the array method is that arrays are not the most intuitive programming method and other users could potentially have a difficult time refactoring the arrays to suit their circumstances. While, in this instance, one could say the pros of refactoring greatly outweighs the cons, this will not always be necessarily true. This is why it should be standard practice to clearly list all pros and cons when considering refactoring code. 
+
