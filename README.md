@@ -107,7 +107,12 @@ With all four arrays completed, the last step to finalize the analysis is to acc
     Cells(i + 4, 3).Value = tickerReturn(i)
   
     Next
+    
+Adding some additional formatting to better visualize the results, the VBA code displays the stock performance for all twelve alternative energy companies in 2017 and 2018. From this, Steve can communicate to his client DQ’s comparative performance within the stock market and whether they should consider investing in any of the other companies within the portfolio. 
 
+<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/Stocks_2017_Return.png">
+
+<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/Stocks_2018_Return.png">
 
 ### Stock Comparison Results 
 
