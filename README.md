@@ -90,6 +90,23 @@ Within these nested For Loops, three conditional formulas are calculated. First,
              
     Next
 
+The only array not populated in the previous iteration was the tickerReturn array. This array is populated based on getting the stock percentage increase or decrease based on the tickerStartingPrices and tickerEndingPrices array. Using another For Loop as below, this array is finalized as well.
+
+For tickerIndex = 0 To 11
+  tickerReturn(tickerIndex) = (tickerEndingPrices(tickerIndex) / tickerStartingPrices(tickerIndex)) - 1
+  
+  Next
+
+With all four arrays completed, the last step to finalize the analysis is to access these arrays and display the results. Since all twelve cells in the tickers, tickerVolumes, and tickerReturn arrays need to be displayed, one last For Loop will be utilized to access each cell in the arrays and print them out in their corresponding column in the analysis worksheet. This For Loop is written as such:
+
+For i = 0 To 11
+   Worksheets("All Stocks Analysis").Activate
+   Cells(i + 4, 1).Value = tickers(i)
+   Cells(i + 4, 2).Value = tickerVolumes(i)
+   Cells(i + 4, 3).Value = tickerReturn(i)
+  
+  Next
+
 
 ### Stock Comparison Results 
 
