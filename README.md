@@ -126,9 +126,9 @@ The visual language of the charts tells a stark story:
 An aspect of this analysis that is imperative to mentioned is that the VBA code that was built was refactored from a similar stock analysis that was performed previously. Refactored, in this case, means restructuring previous existing code to better suit the circumstances of the current analysis. While the original code may have been suitable to perform analysis on moderately-sized data, it would not have been as optimal in analyzing thousands of rows on data as in this instance. The refactoring turned the originally code into a much more efficient, structured, and optimized algorithm. An example of this improvement is the run time of the code. For the refactored code, the run time for each year’s data run was follow:
 
 
-<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2017.png>
+<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2017.png">
             
-<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2018.png>
+<img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2018.png">
 
 
 ## Summary
