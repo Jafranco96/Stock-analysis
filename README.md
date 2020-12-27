@@ -127,9 +127,12 @@ An aspect of this analysis that is imperative to mentioned is that the VBA code 
 
 
 <img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2017.png">
+
             
 <img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2018.png">
 
+
+In comparison, the original non-refactored code yielded a run time of .72 seconds for the 2017 data and .75 seconds for the 2018 data, leading to a decrease in running time for the refactored code at 8% and 11% respectively. This decrease in running time is just one of the many advantages of refactoring existing code to better suit the changing needs of each analysis. 
 
 ## Summary
 •	What are the advantages or disadvantages of refactoring code?
