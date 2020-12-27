@@ -16,6 +16,7 @@ As mentioned, VBA is a more suitable platform to perform the analysis rather tha
 Since there are several alternative energy companies and their individual results to consider, arrays are created in order to store and, later, access these values. Since Steve’s current portfolio consists of twelve companies, an array twelve characters long named tickers is created. The array’s index is then initialized to each stock code in alphabetical order. Since VBA arrays commence at index 0 rather than index 1, the last index in the array is actually index 11. The code as described is written in the module as follows:
 
 'Initialize array of all tickers
+
     Dim tickers(11) As String
     
     tickers(0) = "AY"
