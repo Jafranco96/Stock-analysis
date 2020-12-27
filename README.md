@@ -4,7 +4,7 @@
 
 ### Purpose
 
-A recent finance graduate, Steve, has been tasked by his first clients to analyze the stock performance of DAQO New Energy (DQ), an alternative energy company which manufactures silicon wafers for solar panels. Since his clients have invested all their capital just in DQ, Steve also wants to asses the potential for his clients to diversify their investment portfolio by expanding his stock performance analysis to cover the alternative energy sector as a whole. Since Steve would want to both automate and reuse the analysis for any future stock opportunities, it became clear that the analysis should be performed using the Excel programming language Visual Basic for Applications (VBA). With a VBA code fully developed, Steve will be able to report to his clients DQ’s most recent stock return and the returns of other alternative energy companies that they might seek to later diversify in.
+A recent finance graduate, Steve, has been tasked by his first clients to analyze the stock performance of DAQO New Energy (DQ), an alternative energy company which manufactures silicon wafers for solar panels. Since his clients have invested all their capital in DQ, Steve also wants to asses the potential for his clients to diversify their investment portfolio by expanding his stock performance analysis to cover the alternative energy sector as a whole. Since Steve would want to both automate and reuse the analysis for any future stock opportunities, it became clear that the analysis should be performed using the Excel programming language Visual Basic for Applications (VBA). With a VBA code fully developed, Steve will be able to report to his clients DQ’s most recent stock return and the returns of other alternative energy companies that they might seek to later diversify in.
 
 
 ## Results
@@ -117,13 +117,14 @@ Adding some additional formatting to better visualize the results, the VBA code 
 ### Stock Comparison Results 
 
 The visual language of the charts tells a stark story:
+
 •	First, while DQ was the best performing stock of the portfolio in 2017 having a 199% return, it was also the worst performing stock in 2018 with a -62% return. This sharp contrast points to a highly volatile stock nature for DQ, yielding a high risk-high reward stock opportunity for Steve’s clients. If they are seeking a more assured and stable investment opportunity, this might not be the investment most suited for them.
 
 •	Second, it is readily apparent that the overall stock performance for the alternative energy sector was significantly down in 2018. Only two companies in the portfolio achieved a positive rate of return. While this could allow Steve’s clients to buy other alternative energy stocks at lower prices, there is the possibility that a similar stock performance in 2019 could yield a further loss of investment. 
 
 •	Lastly, the only two companies to achieve a positive rate of return in both years were ENPH and RUN. This is particularly notable considering the overall state of the market in 2018. If Steve’s clients would want to further invest in this particular market, these two companies should be the first considerations.
 
-An aspect of this analysis that is imperative to mentioned is that the VBA code that was built was refactored from a similar stock analysis that was performed previously. Refactored, in this case, means restructuring previous existing code to better suit the circumstances of the current analysis. While the original code may have been suitable to perform analysis on moderately-sized data, it would not have been as optimal in analyzing thousands of rows on data as in this instance. The refactoring turned the originally code into a much more efficient, structured, and optimized algorithm. An example of this improvement is the run time of the code. For the refactored code, the run time for each year’s data run was follow:
+An aspect of this analysis that is imperative to mentioned is that the VBA code that was built was refactored from a similar stock analysis that was performed previously. Refactored, in this case, means restructuring previous existing code to better suit the circumstances of the current analysis. While the original code may have been suitable to perform analysis on moderately-sized data, it would not have been as optimal in analyzing thousands of rows on data as in this instance. The refactoring turned the originally code into a much more efficient, structured, and optimized algorithm. An example of this improvement is the run time of the code. For the refactored code, the run time for each year’s data run was as follow:
 
 
 <img src = "https://github.com/Jafranco96/Stock-analysis/blob/main/Resources/VBA_Challenge_2017.png">
